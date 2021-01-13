@@ -8,7 +8,7 @@ export const HomeStyle = styled.div`
 export const Content = styled.div`
     width: 100%;
     height: 100vh;
-    background-color: coral;
+    background-color: #FAFAFA;
     display: flex;
     left: auto;
     flex-direction: column;
@@ -29,5 +29,6 @@ export const TitleArea = styled.div`
     align-items: center;
     justify-content: center;
     width: 100%;
-    background-color: beige;
+    max-width: 760px;
+    margin: auto;
 `;

@@ -2,9 +2,8 @@ import styled from 'styled-components';
 
 export const ContainerLeft = styled.div`
     height: 95%;
-    background-color: blueviolet;
     flex: 2;
-    margin-left: 5px;
+    margin-right: 10px;
 
     display: flex;
     flex-direction: column;
@@ -12,7 +11,6 @@ export const ContainerLeft = styled.div`
 
 export const ContainerRight = styled(ContainerLeft)`
     flex: 1;
-    background-color: blue;
     margin-right: 5px;
 `; 
 
@@ -23,20 +21,23 @@ export const BarGraphArea = styled.div`
 
 // Area do grafico de circulo
 export const CirGraphArea = styled(BarGraphArea)`
-
+    margin-top: 10px;
+    margin-bottom: 10px;
 `;
 
 // Area da lista esquerda
 export const LeftListArea = styled(BarGraphArea)`
-
+   
 `;
 
 // Area do grafico de circulo direita
 export const RightCirGraphArea = styled.div`
     flex: 1;
+    margin-bottom: 7px;
 `;
 
 // Area da lista direita
 export const RightListArea = styled.div`
     flex: 2;
+    margin-top: 3px;
 `;

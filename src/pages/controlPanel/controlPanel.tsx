@@ -14,25 +14,25 @@ import {
 // especificos de cada opção do header
 export default function ControlPanel(){
     return(
-        // Conteudo da page (nao precisa ser o elemento)
+        // Conteudo da page
         <>
             <ContainerLeft>
                 <BarGraphArea>
                     <Card />
                 </BarGraphArea>
                 <CirGraphArea>
-
+                    <Card />
                 </CirGraphArea>
                 <LeftListArea>
-
+                    <Card />
                 </LeftListArea>
             </ContainerLeft>
             <ContainerRight>
                 <RightCirGraphArea>
-
+                    <Card />
                 </RightCirGraphArea>
                 <RightListArea>
-                    
+                    <Card />
                 </RightListArea>
             </ContainerRight>
         </>

@@ -17,10 +17,13 @@ export function DataProvider({children}: Iprops){
     
     // Esse state será usado pela aplicação que estiver dentro do DataProvider
     const [ data, setData ] = useState<object>({primeiro: "sim"});
-    console.log(data);
+
+    function changeData(dado: object){
+        setData(dado);
+    }
 
     return (
-        <DataContext.Provider value={{dado: data, changeData: setData}}>
+        <DataContext.Provider value={{dado: data, changeData: changeData}}>
             {children}
         </DataContext.Provider>
     )
