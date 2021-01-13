@@ -43,16 +43,23 @@ export const ChangeContent = styled.div`
     height: 100vh;
     background-color: #FAFAFA;
     width: ${({ width }: Iprops)=>{ return `${width}px` }};
+    border: 1px solid #EBEBEB;
+    border-top: none;
+    border-bottom: none;
+    border-left: none;
+    
 
     img{
         transition: 0.2s;
-        height: 2vh;
+        height: 10px;
         right: 1px;
         top: 2px;
-        transform: rotate(180deg);
+        background-color: #0794B3;
+        padding: 2px 4px;
+        border-radius: 20px;
         margin-left: ${({ width }: Iprops)=>{ return `${width-18}px` }};
         :hover{
-            height: 2.5vh;
+            height: 15px;
         }
     }
 `;

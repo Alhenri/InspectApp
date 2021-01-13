@@ -6,5 +6,6 @@ html, body, #root {
     width: 100vw;
     text-decoration: none;
     background-color: blueviolet;
+    font-family: 'Poppins', sans-serif;
 }
 

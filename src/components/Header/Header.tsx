@@ -16,7 +16,7 @@ export default function Header(){
             {/* controle da barra de mudança de conteudo */}
             {
                 status?
-                <ChangeContent width={200}>
+                <ChangeContent width={180}>
                     <img src={img_arrow} alt="->" onClick={()=>{ setStatus(false) }} />
                 </ChangeContent>
                 :
