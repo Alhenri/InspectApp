@@ -31,13 +31,22 @@ export default function Header({ OnClick }: Iprops ){
                     <img src={img_arrow} className="arrow" alt="->" onClick={()=>{ setStatus(false) }} />
                     
                     <SpanContainer>
-                        <SpanStyle className="controlPanel" onClick={(event) =>{ 
+                        <SpanStyle id="controlPanel" onClick={(event) =>{ 
                             if(OnClick){
-                                OnClick(event.currentTarget.className);
+                                OnClick(event.currentTarget.id);
                             }
                         }}>
                             <img src={img_icon} alt="error"/>
                             Painel de controle
+                        </SpanStyle>
+
+                        <SpanStyle id="example" onClick={(event) =>{ 
+                            if(OnClick){
+                                OnClick(event.currentTarget.id);
+                            }
+                        }}>
+                            <img src={img_icon} alt="error"/>
+                            Exemplo
                         </SpanStyle>
                     </SpanContainer>
                 </ChangeContent>

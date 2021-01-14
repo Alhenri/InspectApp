@@ -74,7 +74,6 @@ export const SpanContainer = styled.div`
 export const SpanStyle = styled.span`
     cursor: pointer;
     display: flex;
-    justify-content: center;
     transition: 0.2s;
     img{
        margin-right: 3px; 

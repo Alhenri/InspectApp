@@ -1,25 +1,56 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Header from '../../components/Header/Header';
 import ControlPanel from '../controlPanel/controlPanel';
 import { Content, ContentArea, HomeStyle, TitleArea } from './style';
 import { DataProvider } from '../../context/DataContextProvider'; // provedor de dados
+import { title } from 'process';
 // Na home vou mudar os conteudos, que na verdade serão como novas pages
 
 function Home() {
 
-  function chooseContent(info: any){
-    console.log(info);
+  interface IContent {
+    title: string,
+    component: JSX.Element
+  }
+
+  const [content, setContent] = useState<IContent>({
+    title: "Painel de controle",
+    component: <ControlPanel />
+  });
+
+  function chooseContent(info: string){
+    switch (info) {
+      case "controlPanel":
+        setContent({
+          title: "Painel de controle",
+          component: <ControlPanel />
+        });
+        break;
+      case "example":
+        setContent({
+          title: "Exemplo",
+          component: <div>Esse é um exemplo de uma tela não construida</div>
+        })
+      break;
+      default:
+        setContent({
+          title: "Not Found",
+          component: <div>{info}</div>
+        });
+        break;
+    }
   }
 
   return (
     <HomeStyle>
       <Header OnClick={chooseContent}/>
       <Content>
-        <TitleArea><h1>Painel de controle</h1></TitleArea>
+        <TitleArea><h1>{content.title}</h1></TitleArea>
         <DataProvider>
         <ContentArea>
-          {/* Aqui vai ser mostrado o conteudo selecionado no header */}
-          <ControlPanel />
+          {
+            content.component
+          }
         </ContentArea>
         </DataProvider>
       </Content>
