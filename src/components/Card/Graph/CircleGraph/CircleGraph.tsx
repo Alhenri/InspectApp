@@ -1,9 +1,11 @@
 import { ResponsivePie } from '@nivo/pie'
-import dado from './data/data-example.json'
+import dado from '../BarGraph/data/data-example.json'
 import { CircleGraphArea } from './style';
+import {dataFilter} from './data/dataFilter'
 
 export const MyResponsivePie = () => {
-    const data: [] = dado as [] // Forçando tipagem pra evitar erro '-'
+    const data = dataFilter(dado); 
+    //dado as [] // Forçando tipagem pra evitar erro '-'
     return (
         <CircleGraphArea>
             <ResponsivePie

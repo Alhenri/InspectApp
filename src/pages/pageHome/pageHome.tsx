@@ -32,12 +32,6 @@ function Home() {
           component: <div>Esse é um exemplo de uma tela não construida</div>
         })
       break;
-      default:
-        setContent({
-          title: "Not Found",
-          component: <div>{info}</div>
-        });
-        break;
     }
   }
 
