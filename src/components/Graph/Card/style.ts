@@ -19,5 +19,4 @@ export const CardStyle = styled.div`
 export const ContentCard = styled.div`
     flex: 9;
     width: 100%;
-    background-color: antiquewhite;
 `;

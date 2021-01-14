@@ -23,6 +23,14 @@ export const BarGraphArea = styled.div`
 export const CirGraphArea = styled(BarGraphArea)`
     margin-top: 10px;
     margin-bottom: 10px;
+    display: flex;
+    
+    div.Card:first-child{
+        margin-right: 5px;
+    }
+    div.Card:last-child{
+        margin-left: 5px;
+    }
 `;
 
 // Area da lista esquerda

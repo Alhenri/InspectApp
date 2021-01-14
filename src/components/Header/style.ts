@@ -49,7 +49,7 @@ export const ChangeContent = styled.div`
     border-left: none;
     
 
-    img{
+    img.arrow{
         transition: 0.2s;
         height: 10px;
         right: 1px;
@@ -61,5 +61,9 @@ export const ChangeContent = styled.div`
         :hover{
             height: 15px;
         }
+    }
+
+    span{
+        margin: auto 0;
     }
 `;

@@ -18,21 +18,22 @@ export default function ControlPanel(){
         <>
             <ContainerLeft>
                 <BarGraphArea>
-                    <Card />
+                    <Card title="Historico de eventos" withSelector />
                 </BarGraphArea>
                 <CirGraphArea>
-                    <Card />
+                    <Card title="Inspeções" subTitle="status do dia" />
+                    <Card title="Plano de ação" subTitle="status do dia" />
                 </CirGraphArea>
                 <LeftListArea>
-                    <Card />
+                    <Card title="Inspeções agendadas" withSelector/>
                 </LeftListArea>
             </ContainerLeft>
             <ContainerRight>
                 <RightCirGraphArea>
-                    <Card />
+                    <Card title="Planos de ação" subTitle="Visão geral" />
                 </RightCirGraphArea>
                 <RightListArea>
-                    <Card />
+                    <Card title="Planos de ação" subTitle="Atualizações"  withSelector/>
                 </RightListArea>
             </ContainerRight>
         </>

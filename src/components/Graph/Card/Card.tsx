@@ -6,12 +6,18 @@ import {
     ContentCard
 } from './style'
 
-export default function Card(){
+interface Iprops{
+    title?: string,
+    subTitle?: string,
+    withSelector?: boolean,
+}
+
+export default function Card({title, withSelector, subTitle}:Iprops){
     //const { dado, changeData } = useContext(dataContext)
 
     return(
-        <CardStyle>
-            <HeaderCard />
+        <CardStyle className="Card">
+            <HeaderCard title={title} withSelector={withSelector} subTitle={subTitle} />
             <ContentCard />
         </CardStyle>
     )

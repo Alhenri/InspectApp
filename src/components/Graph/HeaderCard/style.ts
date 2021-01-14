@@ -1,20 +1,39 @@
 import styled from 'styled-components';
 
 export const HeaderCardStyle = styled.div`
-    height: 25px;
-`;
-
-export const HeaderTitleArea = styled.div`
+    height: 35px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+`;
 
-    h5{
+export const HeaderTitleArea = styled.div`
+    flex: 1;
+    h5, h6{
         margin: 0;
         margin-left: 5px;
     }
+    h6{
+        font-weight: normal;
+    }
 
+`;
+
+export const HeaderConfigArea = styled.div`
+    display: flex;
+    flex: 1;
     img{
         height: 20px;
+        transition: 1s;
+        :hover{
+            transform: rotate(180deg);
+        }
+        margin-left: auto;
+    }
+    select{
+        flex: 1;
+        background: #C4C4C4;
+        border-radius: 100px;
+        margin-right: 5px;
     }
 `;
