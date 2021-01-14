@@ -1,5 +1,5 @@
 import React from 'react'
-import Card from '../../components/Graph/Card/Card'
+import Card from '../../components/Card/Card'
 import { 
     ContainerLeft,
     ContainerRight,
@@ -18,11 +18,11 @@ export default function ControlPanel(){
         <>
             <ContainerLeft>
                 <BarGraphArea>
-                    <Card title="Historico de eventos" withSelector />
+                    <Card title="Historico de eventos" withSelector type="BarGraph" />
                 </BarGraphArea>
                 <CirGraphArea>
-                    <Card title="Inspeções" subTitle="status do dia" />
-                    <Card title="Plano de ação" subTitle="status do dia" />
+                    <Card title="Inspeções" subTitle="status do dia" type="CircleGraph" />
+                    <Card title="Plano de ação" subTitle="status do dia" type="CircleGraph" />
                 </CirGraphArea>
                 <LeftListArea>
                     <Card title="Inspeções agendadas" withSelector/>
@@ -30,7 +30,7 @@ export default function ControlPanel(){
             </ContainerLeft>
             <ContainerRight>
                 <RightCirGraphArea>
-                    <Card title="Planos de ação" subTitle="Visão geral" />
+                    <Card title="Planos de ação" subTitle="Visão geral" type="CircleGraph"/>
                 </RightCirGraphArea>
                 <RightListArea>
                     <Card title="Planos de ação" subTitle="Atualizações"  withSelector/>

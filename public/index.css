@@ -2,10 +2,8 @@ html, body, #root {
     margin: 0;
     padding: 0;
     align-items: center;
-    height: 100vh;
-    width: 100vw;
+    height: 150vh;
     text-decoration: none;
-    background-color: blueviolet;
+    background-color: white;
     font-family: 'Poppins', sans-serif;
 }
-

@@ -1,13 +1,13 @@
 import styled from 'styled-components';
 
 export const HomeStyle = styled.div`
-    height: 100vh;
+    height: 100%;
     display: flex;
 `;
 
 export const Content = styled.div`
     width: 100%;
-    height: 100vh;
+    height: 100%;
     background-color: #FAFAFA;
     display: flex;
     left: auto;
@@ -29,6 +29,6 @@ export const TitleArea = styled.div`
     align-items: center;
     justify-content: center;
     width: 100%;
-    max-width: 760px;
+    max-width: 960px;
     margin: auto;
 `;

@@ -6,9 +6,14 @@ import { DataProvider } from '../../context/DataContextProvider'; // provedor de
 // Na home vou mudar os conteudos, que na verdade serão como novas pages
 
 function Home() {
+
+  function chooseContent(info: any){
+    console.log(info);
+  }
+
   return (
     <HomeStyle>
-      <Header />
+      <Header OnClick={chooseContent}/>
       <Content>
         <TitleArea><h1>Painel de controle</h1></TitleArea>
         <DataProvider>

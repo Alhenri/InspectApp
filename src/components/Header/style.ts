@@ -1,21 +1,18 @@
 import styled from 'styled-components'
 
 export const HeaderStyle = styled.div`
-    height: 100vh;
+    height: 100%;
     display: flex;
 `;
 
 export const PageBar = styled.div`
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    align-items: center;
     width: 51px;
-    height: 100vh;
+    height: 100%;
     left: 0px;
     top: 0px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 
     img{
         width: 24px;
@@ -23,9 +20,10 @@ export const PageBar = styled.div`
         padding: 10px;
         border-radius: 12px;
         top: 10vh;
-        margin: 0 auto;
+        margin: 5px auto;
+        transition: 0.3s;
         :hover{
-            background-color: #FAFAFA;
+            background-color: #E2E2E2;
             border-radius: 6px;
         }
     }
@@ -39,31 +37,49 @@ interface Iprops {
 }
 
 export const ChangeContent = styled.div`
-    transition: 0.2s;
-    height: 100vh;
+    transition: 0.4s;
+    height: 100%;
     background-color: #FAFAFA;
     width: ${({ width }: Iprops)=>{ return `${width}px` }};
     border: 1px solid #EBEBEB;
     border-top: none;
     border-bottom: none;
     border-left: none;
-    
 
     img.arrow{
-        transition: 0.2s;
-        height: 10px;
+        transition: 0.4s;
+        height: 15px;
         right: 1px;
         top: 2px;
         background-color: #0794B3;
         padding: 2px 4px;
-        border-radius: 20px;
+        border-radius: 30px;
         margin-left: ${({ width }: Iprops)=>{ return `${width-18}px` }};
+        margin-top: 5px;
+        margin-bottom: 5vh;
+
         :hover{
-            height: 15px;
+            transform: scale(1.3);
         }
     }
 
-    span{
-        margin: auto 0;
+`;
+
+export const SpanContainer = styled.div`
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+`;
+
+export const SpanStyle = styled.span`
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    transition: 0.2s;
+    img{
+       margin-right: 3px; 
+    }
+    :hover{
+        background-color: wheat;
     }
 `;

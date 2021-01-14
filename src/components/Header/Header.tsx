@@ -1,10 +1,20 @@
 import React, { useState } from 'react';
-import { ChangeContent, HeaderStyle, PageBar } from  './style';
 import img_op from '../../assets/cardapio.svg'; 
 import img_arrow from '../../assets/arrow.svg';
 import img_icon from '../../assets/icon.svg';
+import { 
+    ChangeContent,
+    HeaderStyle,
+    PageBar,
+    SpanContainer,
+    SpanStyle
+} from  './style';
 
-export default function Header(){
+interface Iprops{
+    OnClick?: Function,
+}
+
+export default function Header({ OnClick }: Iprops ){
 
     const [ status, setStatus ] = useState(true);
 
@@ -16,15 +26,22 @@ export default function Header(){
 
             {/* controle da barra de mudança de conteudo */}
             {
-                status?
+                status?// Quando maximizado
                 <ChangeContent width={180}>
                     <img src={img_arrow} className="arrow" alt="->" onClick={()=>{ setStatus(false) }} />
-                    <span>
-                        <img src={img_icon} alt="error"/>
-                        Painel de controle
-                    </span>
+                    
+                    <SpanContainer>
+                        <SpanStyle className="controlPanel" onClick={(event) =>{ 
+                            if(OnClick){
+                                OnClick(event.currentTarget.className);
+                            }
+                        }}>
+                            <img src={img_icon} alt="error"/>
+                            Painel de controle
+                        </SpanStyle>
+                    </SpanContainer>
                 </ChangeContent>
-                :
+                :// Quando minimizado
                 <ChangeContent width={20}>
                     <img src={img_arrow} className="arrow" alt="->" onClick={()=>{ setStatus(true) }} />
                 </ChangeContent>
