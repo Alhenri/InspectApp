@@ -3,6 +3,8 @@ import dado from '../BarGraph/data/data-example.json'
 import { CircleGraphArea } from './style';
 import {dataFilter} from './data/dataFilter'
 
+// Colocar os dados como parametro
+
 export const MyResponsivePie = () => {
     const data = dataFilter(dado); 
     //dado as [] // Forçando tipagem pra evitar erro '-'

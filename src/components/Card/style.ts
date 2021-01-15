@@ -20,5 +20,6 @@ export const ContentCard = styled.div`
     flex: 9;
     width: 100%;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 `;

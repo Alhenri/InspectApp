@@ -76,6 +76,7 @@ export const SpanStyle = styled.span`
     display: flex;
     transition: 0.2s;
     img{
+        margin-left: 3px;
        margin-right: 3px; 
     }
     :hover{

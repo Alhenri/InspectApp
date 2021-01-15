@@ -25,7 +25,7 @@ export default function ControlPanel(){
                     <Card title="Plano de ação" subTitle="status do dia" type="CircleGraph" />
                 </CirGraphArea>
                 <LeftListArea>
-                    <Card title="Inspeções agendadas" withSelector/>
+                    <Card title="Inspeções agendadas" withSelector withInput type="Table"  />
                 </LeftListArea>
             </ContainerLeft>
             <ContainerRight>
@@ -33,7 +33,7 @@ export default function ControlPanel(){
                     <Card title="Planos de ação" subTitle="Visão geral" type="CircleGraph"/>
                 </RightCirGraphArea>
                 <RightListArea>
-                    <Card title="Planos de ação" subTitle="Atualizações"  withSelector/>
+                    <Card title="Planos de ação" subTitle="Atualizações"  withSelector withInput/>
                 </RightListArea>
             </ContainerRight>
         </>

@@ -2,6 +2,8 @@ import dado from './data/data-example.json';
 import { ResponsiveBar } from '@nivo/bar';
 import { GraphArea } from './style';
 
+
+// colocar os dados como parametro
 export const MyResponsiveBar = () => {
     
     return (
