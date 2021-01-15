@@ -35,6 +35,10 @@ export const InfoArea = styled.div`
     flex-direction: column;
     align-items: center;
     flex: 2;
+
+    h6{
+        margin: 0;
+    }
 `;
 
 export const StatusDone = styled.section`

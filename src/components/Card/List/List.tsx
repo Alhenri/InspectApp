@@ -45,7 +45,9 @@ export default function List(){
                                             <h6>Pendente</h6>
                                         </StatusToDo>
                                     }
-                                    {dat.hora} {dat.data}
+                                    <h6>
+                                        {dat.hora} {dat.data}
+                                    </h6>
                                 </InfoArea>
                             </ListItem>
                     )})}
