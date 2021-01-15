@@ -35,7 +35,6 @@ export default function Table(){
                         Ultima atualização
                     </th>
                 </tr>
-
                     {
                         Lines.map((line)=>{
                             return(

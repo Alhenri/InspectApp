@@ -33,7 +33,7 @@ export default function ControlPanel(){
                     <Card title="Planos de ação" subTitle="Visão geral" type="CircleGraph"/>
                 </RightCirGraphArea>
                 <RightListArea>
-                    <Card title="Planos de ação" subTitle="Atualizações"  withSelector withInput/>
+                    <Card title="Planos de ação" subTitle="Atualizações" type="List" withSelector withInput/>
                 </RightListArea>
             </ContainerRight>
         </>

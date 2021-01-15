@@ -5,6 +5,7 @@ import {MyResponsiveBar} from './Graph/BarGraph/BarGrapg';
 import { MyResponsivePie } from './Graph/CircleGraph/CircleGraph';
 import Input from '../Input/Input';
 import Table from './Table/Table';
+import List from './List/List';
 import {
     CardStyle,
     ContentCard
@@ -15,11 +16,12 @@ interface Iprops{
     subTitle?: string,
     withSelector?: boolean,
     withInput?: boolean,
-    children?: JSX.Element,
+    children?: JSX.Element, // talvez precise
+    data?: Object[],
     type?: string
 }
 
-export default function Card({title, withSelector, subTitle, children, type, withInput }:Iprops){
+export default function Card({title, withSelector, subTitle, type, withInput, data }:Iprops){
     const { dado, changeData } = useContext(dataContext)
 
     function chooseContent(){
@@ -30,6 +32,8 @@ export default function Card({title, withSelector, subTitle, children, type, wit
                 return <MyResponsivePie />
             case "Table":
                 return <Table />
+            case "List":
+                return <List />
             default:
                 break;
         }
