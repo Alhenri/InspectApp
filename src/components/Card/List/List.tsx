@@ -1,5 +1,6 @@
 import React from 'react';
-import dadoexample from './data/data-example.json';
+import DataList from './data/configDataList';
+
 import {
     ListContent,
     ListItem,
@@ -9,25 +10,18 @@ import {
     StatusToDo
 } from './style';
 
-interface IDataList{
-    plano: string,
-    responsavel: string,
-    status: string,
-    hora: string,
-    data: string
-}
-
 interface Iprops{
-    data: IDataList[]
+    data: object[]
 }
 
-export default function List(){
-    const data: IDataList[] = dadoexample as unknown as IDataList[];
+export default function List({data}: Iprops){
+    const dataList = new DataList(data);
+    dataList.dataConverter();
 
     return(
         <ListContent>
             {
-                data.map(
+                dataList.outData.map(
                     (dat) => {
                         return(
                             <ListItem>

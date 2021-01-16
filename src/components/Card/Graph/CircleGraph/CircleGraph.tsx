@@ -1,5 +1,4 @@
 import { ResponsivePie } from '@nivo/pie';
-import dado from '../BarGraph/data/data-example.json';
 import { DataCicleGraph } from './data/ConfigDataCG';
 import verm from '../../../../assets/iconVerm.svg';
 import verd from '../../../../assets/iconV.svg';
@@ -16,14 +15,14 @@ import {
 
 // Colocar os dados como parametro
 interface Iprops{
-    data?: object,
+    data: object[],
     withLabel?: boolean
 }
 
-export const MyResponsivePie = ({ withLabel }:Iprops) => {
+export const MyResponsivePie = ({ withLabel, data }:Iprops) => {
     // Classe que faz a manipulação dos dados para o grafico
-    const DataConfig = new DataCicleGraph(dado);
-    DataConfig.dataConverter(dado);
+    const DataConfig = new DataCicleGraph(data);
+    DataConfig.dataConvertMedia();
     
     return (
         <GraphArea>

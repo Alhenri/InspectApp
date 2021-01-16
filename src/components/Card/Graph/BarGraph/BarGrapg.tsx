@@ -1,4 +1,5 @@
-import dado from './data/data-example.json';
+//import dado from './data/data-example.json';
+import DataBarGraph from './data/configBarGraph';
 import { ResponsiveBar } from '@nivo/bar';
 import verm from '../../../../assets/iconVerm.svg';
 import verd from '../../../../assets/iconV.svg';
@@ -11,17 +12,22 @@ import {
     LabelStyle
 } from './style';
 
+interface Iprops{
+    dado: object[]
+}
 
 // colocar os dados como parametro
-export const MyResponsiveBar = () => {
-    
+export const MyResponsiveBar = ({ dado }: Iprops) => {
+    const dataBarGraph = new DataBarGraph(dado);
+    dataBarGraph.converterData();
+
     return (
-        <ContentGraph className="teste">
+        <ContentGraph>
             <GraphArea>
                 <ResponsiveBar
-                    data={dado}
-                    keys={[ 'Azul', 'Vermelho', 'Roxo']}
-                    indexBy="Day"
+                    data={dataBarGraph.outData}
+                    keys={[ 'azul', 'vermelho', 'roxo']}
+                    indexBy="key"
                     padding={0.3}
                     groupMode="grouped"
                     valueScale={{ type: 'linear' }}

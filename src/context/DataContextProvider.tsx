@@ -1,8 +1,9 @@
+import dataBase from './database/DataBase-Example';
 // Arquivo que fará a captura dos dados
 import React, { createContext, useState, ReactNode } from 'react'
 
 interface Idata{
-    dado: object| null, // as informaçoes de fato
+    dado: object, // as informaçoes de fato
     changeData: Function; // muda informação
 }
 
@@ -16,7 +17,7 @@ const DataContext = createContext <Idata>({} as Idata); // dados do meu contexto
 export function DataProvider({children}: Iprops){
     
     // Esse state será usado pela aplicação que estiver dentro do DataProvider
-    const [ data, setData ] = useState<object>({primeiro: "sim"});
+    const [ data, setData ] = useState<object>(dataBase());
 
     function changeData(dado: object){
         setData(dado);

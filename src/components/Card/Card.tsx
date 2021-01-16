@@ -18,7 +18,7 @@ interface Iprops{
     withInput?: boolean,
     withLabel?: boolean,
     children?: JSX.Element, // talvez precise
-    data?: Object[],
+    data: Object[],
     type?: string
 }
 
@@ -28,13 +28,13 @@ export default function Card({title, withSelector, subTitle, type, withInput, wi
     function chooseContent(){
         switch (type) {
             case "BarGraph":
-                return <MyResponsiveBar />
+                return <MyResponsiveBar dado={data} />
             case "CircleGraph":
-                return <MyResponsivePie withLabel={withLabel}/>
+                return <MyResponsivePie withLabel={withLabel} data={data}/>
             case "Table":
-                return <Table />
+                return <Table data={data} />
             case "List":
-                return <List />
+                return <List data={data} />
             default:
                 break;
         }

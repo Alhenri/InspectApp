@@ -1,9 +1,9 @@
 import React from 'react';
+import DataTable from './data/configDataTable'
 import {
     TableStyle,
     ContentTable
 } from './style'
-import dados from './data/dados.json';
 
 interface IDataTable{
     nome: string,
@@ -13,11 +13,13 @@ interface IDataTable{
 
 }
 interface Iprops{
-    Lines: IDataTable[]
+    data: object[]
 }
 
-export default function Table(){
-    const Lines: IDataTable[] = dados as unknown as IDataTable[]
+export default function Table({ data }:Iprops){
+    const dataTable = new DataTable(data);
+    dataTable.dataConverter();
+
     return(
         <ContentTable>
             <TableStyle>
@@ -36,7 +38,7 @@ export default function Table(){
                     </th>
                 </tr>
                     {
-                        Lines.map((line)=>{
+                        dataTable.outData.map((line)=>{
                             return(
                                 <tr className="Data">
                                     <td className="Name" >

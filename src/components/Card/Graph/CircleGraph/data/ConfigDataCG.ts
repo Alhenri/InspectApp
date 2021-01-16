@@ -17,8 +17,10 @@ interface IDataOut{ // Interface dos dados que saem apropiados para os gráficos
 
 export class DataCicleGraph {
     outData: IDataOut[];
+    inData: IDataIn[];
 
-    constructor(DataDefault: IDataIn[]){
+    constructor(DataDefault: object[]){
+        this.inData = DataDefault as IDataIn[];
         this.outData = [
             {
                 id: "Azul",
@@ -36,8 +38,8 @@ export class DataCicleGraph {
     }
 
     // Função que converte os dados para o grafico
-    dataConverter(data: IDataIn[]){
-        data.map(
+    dataConverter(){
+        this.inData.map(
             (dat)=>{
                 this.outData[0].value += dat.Azul
                 this.outData[1].value += dat.Roxo
@@ -47,12 +49,12 @@ export class DataCicleGraph {
     }
 
     // Convertendo tirando a média
-    dataConvertMedia(data: IDataIn[]){
-        data.map(
+    dataConvertMedia(){
+        this.inData.map(
             (dat) => {
-                this.outData[0].value += Math.round(dat.Azul/data.length);
-                this.outData[1].value += Math.round(dat.Roxo/data.length);
-                this.outData[2].value += Math.round(dat.Vermelho/data.length);
+                this.outData[0].value += Math.round(dat.Azul/this.inData.length);
+                this.outData[1].value += Math.round(dat.Roxo/this.inData.length);
+                this.outData[2].value += Math.round(dat.Vermelho/this.inData.length);
             }
         )
     }
