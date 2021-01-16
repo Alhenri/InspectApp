@@ -16,12 +16,13 @@ interface Iprops{
     subTitle?: string,
     withSelector?: boolean,
     withInput?: boolean,
+    withLabel?: boolean,
     children?: JSX.Element, // talvez precise
     data?: Object[],
     type?: string
 }
 
-export default function Card({title, withSelector, subTitle, type, withInput, data }:Iprops){
+export default function Card({title, withSelector, subTitle, type, withInput, withLabel, data }:Iprops){
     const { dado, changeData } = useContext(dataContext)
 
     function chooseContent(){
@@ -29,7 +30,7 @@ export default function Card({title, withSelector, subTitle, type, withInput, da
             case "BarGraph":
                 return <MyResponsiveBar />
             case "CircleGraph":
-                return <MyResponsivePie />
+                return <MyResponsivePie withLabel={withLabel}/>
             case "Table":
                 return <Table />
             case "List":

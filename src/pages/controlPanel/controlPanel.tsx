@@ -21,8 +21,8 @@ export default function ControlPanel(){
                     <Card title="Historico de eventos" withSelector type="BarGraph" />
                 </BarGraphArea>
                 <CirGraphArea>
-                    <Card title="Inspeções" subTitle="status do dia" type="CircleGraph" />
-                    <Card title="Plano de ação" subTitle="status do dia" type="CircleGraph" />
+                    <Card title="Inspeções" subTitle="status do dia" type="CircleGraph" withLabel/>
+                    <Card title="Plano de ação" subTitle="status do dia" type="CircleGraph" withLabel/>
                 </CirGraphArea>
                 <LeftListArea>
                     <Card title="Inspeções agendadas" withSelector withInput type="Table"  />
