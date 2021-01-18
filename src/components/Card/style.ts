@@ -1,9 +1,13 @@
 import styled from 'styled-components';
 
+interface IProps{
+    type: string
+}
+
 export const CardStyle = styled.div`
     flex: 1;
-    height: 100%;
-    width: 100%;
+    height: ${({type}:IProps)=> type==="List"?"97.5%":"95%"};
+    width: 95%;
     background-color: white;
 
     border: 0.5px solid #E4E4E4;
@@ -14,11 +18,12 @@ export const CardStyle = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
 `;
 
 export const ContentCard = styled.div`
-    flex: 9;
-    width: 100%;
+    height: 100%;
+    width: 95%;
     display: flex;
     flex-direction: column;
     align-items: center;

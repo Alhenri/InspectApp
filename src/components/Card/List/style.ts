@@ -1,13 +1,10 @@
 import styled from 'styled-components'
 
 export const ListContent = styled.div`
-    margin-top: 15px;
+
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-height: 450px;
     overflow: auto;
+    max-height: 80%;
 `;
 
 export const ListItem = styled.span`
@@ -16,6 +13,7 @@ export const ListItem = styled.span`
     border-bottom: 1px solid #EBEBEB;
     display: flex;
     align-items: center;
+    margin: 0 auto;
 `;
 
 export const TitleArea = styled.div`

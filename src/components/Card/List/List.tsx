@@ -44,7 +44,8 @@ export default function List({data}: Iprops){
                                     </h6>
                                 </InfoArea>
                             </ListItem>
-                    )})}
+                    )})
+            }
         </ListContent>
     )
 }

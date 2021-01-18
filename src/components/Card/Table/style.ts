@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const ContentTable = styled.div`
     width: 90%;
     margin-top: 2%;
-    max-height: 28vh;
+    max-height: 70%;
     overflow: auto;
 `;
 

@@ -17,6 +17,7 @@ export const Content = styled.div`
 export const TitleArea = styled.div`
     width: 100%;
     flex: 1;
+    max-height: 70px;
     h1{
         margin: 0;
         margin-top: 2vh;

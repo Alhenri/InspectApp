@@ -19,7 +19,7 @@ interface Iprops{
     withLabel?: boolean,
     children?: JSX.Element, // talvez precise
     data: Object[],
-    type?: string
+    type: string
 }
 
 export default function Card({title, withSelector, subTitle, type, withInput, withLabel, data }:Iprops){
@@ -41,7 +41,7 @@ export default function Card({title, withSelector, subTitle, type, withInput, wi
     }
 
     return(
-        <CardStyle className="Card">
+        <CardStyle className="Card" type={type}>
             <HeaderCard title={title} withSelector={withSelector} subTitle={subTitle} />
             <ContentCard>
                 {withInput?<Input/>:null}

@@ -1,7 +1,8 @@
 import React, { useContext } from 'react'
 import Card from '../../components/Card/Card'
 import DataContext from '../../context/DataContextProvider';
-import { 
+import {
+    ControlPanelStyle,
     ContainerLeft,
     ContainerRight,
     BarGraphArea,
@@ -24,7 +25,7 @@ export default function ControlPanel(){
     const data: IDataOut = dado as unknown as IDataOut;
     return(
         // Conteudo da page
-        <>
+        <ControlPanelStyle>
             <ContainerLeft>
                 <BarGraphArea>
                     <Card title="Historico de eventos" withSelector type="BarGraph" data={data.Graph} />
@@ -39,12 +40,12 @@ export default function ControlPanel(){
             </ContainerLeft>
             <ContainerRight>
                 <RightCirGraphArea>
-                    <Card title="Planos de ação" subTitle="Visão geral" type="CircleGraph" data={data.Graph}/>
+                    <Card title="Planos de ação" subTitle="Visão geral" type="CircleGraph" withLabel data={data.Graph}/>
                 </RightCirGraphArea>
                 <RightListArea>
-                    <Card title="Planos de ação" subTitle="Atualizações" type="List" withSelector withInput data={data.List}/>
+                    <Card title="Planos de ação" subTitle="Atualizações" type="List" withInput data={data.List}/>
                 </RightListArea>
             </ContainerRight>
-        </>
+        </ControlPanelStyle>
     )
 }

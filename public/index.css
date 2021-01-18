@@ -2,8 +2,21 @@ html, body, #root {
     margin: 0;
     padding: 0;
     align-items: center;
+    min-height: 1000px;
     height: 150vh;
     text-decoration: none;
     background-color: white;
     font-family: 'Poppins', sans-serif;
+}
+
+@media (max-width: 860px){
+    html, body, #root{
+        height: 350vh;
+    }
+}
+
+@media (max-width: 580px){
+    html, body, #root{
+        height: 400vh;
+    }
 }

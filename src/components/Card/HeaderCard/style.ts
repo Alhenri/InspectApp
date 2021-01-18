@@ -1,10 +1,12 @@
 import styled from 'styled-components';
 
 export const HeaderCardStyle = styled.div`
-    height: 35px;
+    height: auto;
+    width: 95%;
+    margin-top: 10px;
+    margin-bottom: 10px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
 `;
 
 export const HeaderTitleArea = styled.div`

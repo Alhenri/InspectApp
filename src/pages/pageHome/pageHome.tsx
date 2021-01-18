@@ -3,7 +3,6 @@ import Header from '../../components/Header/Header';
 import ControlPanel from '../controlPanel/controlPanel';
 import { Content, ContentArea, HomeStyle, TitleArea } from './style';
 import { DataProvider } from '../../context/DataContextProvider'; // provedor de dados
-import { title } from 'process';
 // Na home vou mudar os conteudos, que na verdade serão como novas pages
 
 function Home() {

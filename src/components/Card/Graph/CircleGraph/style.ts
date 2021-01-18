@@ -9,7 +9,6 @@ export const CircleGraphArea = styled.div`
 export const Content = styled.div`
     display: flex;
     margin-top: 5px;
-    height: 100%;
     width: 100%;
     justify-content: space-between;
 `;
@@ -49,11 +48,12 @@ export const TableStyle = styled.div`
 
 export const GraphArea = styled.div`
     margin-top: 2vh;
-    height: 15vh;
+    height: 90%;
     width: 90%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
 `;
 
 export const LabelStyle = styled.div`
