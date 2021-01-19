@@ -2,8 +2,7 @@ html, body, #root {
     margin: 0;
     padding: 0;
     align-items: center;
-    min-height: 1000px;
-    height: 150vh;
+    height: 160vh;
     text-decoration: none;
     background-color: white;
     font-family: 'Poppins', sans-serif;

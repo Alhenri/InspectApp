@@ -1,10 +1,10 @@
 import styled from 'styled-components';
 
 export const ContentTable = styled.div`
+    overflow: auto;
     width: 90%;
     margin-top: 2%;
-    max-height: 70%;
-    overflow: auto;
+    height: 65%;
 `;
 
 export const TableStyle = styled.table`

@@ -16,7 +16,7 @@ export const Content = styled.div`
 
 export const TitleArea = styled.div`
     width: 100%;
-    flex: 1;
+    height: 10%;
     max-height: 70px;
     h1{
         margin: 0;
@@ -25,11 +25,15 @@ export const TitleArea = styled.div`
     }
 `;
  export const ContentArea = styled.div`
-    flex: 9;
+    height: 90%;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
     max-width: 960px;
     margin: auto;
+
+    @media(max-width: 580px){
+        width: 90%;
+    }
 `;

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const HeaderCardStyle = styled.div`
-    height: auto;
+    height: 10%;
     width: 95%;
     margin-top: 10px;
     margin-bottom: 10px;

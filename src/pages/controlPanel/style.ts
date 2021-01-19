@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const ControlPanelStyle = styled.div`
     height: 100%;
     width: 100%;
-    min-width: 840px;
+    min-width: 740px;
     display: flex;
     @media(max-width: 860px){
         flex-direction: column;
@@ -14,20 +14,25 @@ export const ControlPanelStyle = styled.div`
 
 export const ContainerLeft = styled.div`
     height: 95%;
-    flex: 2;
+    flex-grow: 2;
     margin-right: 10px;
     @media(max-width: 860px){
-        flex-grow: 1;
+       height: 50%;
     }
     @media(max-width: 580px){
-        flex-grow: 1;
+        height: 55%;
+        margin-right: 0px;
     }
     
 `;
 
 export const ContainerRight = styled(ContainerLeft)`
-    flex: 1;
+    flex-grow: 1;
     margin-right: 5px;
+    @media(max-width: 580px){
+        height: 35%;
+        margin-right: 0px;
+    }
 `; 
 
 // Area do grafico de barras
@@ -38,11 +43,11 @@ export const BarGraphArea = styled.div`
     @media(max-width: 580px){
         height: 25%;
     }
+
 `;
 
 // Area do grafico de circulo
 export const CirGraphArea = styled(BarGraphArea)`
-    display: flex;
     
     div.Card:first-child{
         margin-right: 5px;
@@ -50,6 +55,7 @@ export const CirGraphArea = styled(BarGraphArea)`
     div.Card:last-child{
         margin-left: 5px;
     }
+
 
     @media(max-width: 580px){
         flex-direction: column;

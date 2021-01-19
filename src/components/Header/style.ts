@@ -3,6 +3,7 @@ import styled from 'styled-components'
 export const HeaderStyle = styled.div`
     height: 100%;
     display: flex;
+    
 `;
 
 export const PageBar = styled.div`
@@ -13,6 +14,10 @@ export const PageBar = styled.div`
     height: 100%;
     left: 0px;
     top: 0px;
+
+    @media(max-width: 580px){
+        display: none
+    }
 
     img{
         width: 24px;
@@ -45,6 +50,10 @@ export const ChangeContent = styled.div`
     border-top: none;
     border-bottom: none;
     border-left: none;
+
+    @media(max-width: 580px){
+        display: none;
+    }
 
     img.arrow{
         transition: 0.4s;

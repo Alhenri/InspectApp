@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 
 export const ListContent = styled.div`
-
     width: 100%;
     overflow: auto;
     max-height: 80%;

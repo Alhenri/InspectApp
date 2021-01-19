@@ -26,7 +26,7 @@ export default function ControlPanel(){
     return(
         // Conteudo da page
         <ControlPanelStyle>
-            <ContainerLeft>
+            <ContainerLeft id="teste">
                 <BarGraphArea>
                     <Card title="Historico de eventos" withSelector type="BarGraph" data={data.Graph} />
                 </BarGraphArea>
@@ -40,7 +40,7 @@ export default function ControlPanel(){
             </ContainerLeft>
             <ContainerRight>
                 <RightCirGraphArea>
-                    <Card title="Planos de ação" subTitle="Visão geral" type="CircleGraph" withLabel data={data.Graph}/>
+                    <Card title="Planos de ação" subTitle="Visão geral" type="CircleGraph" data={data.Graph}/>
                 </RightCirGraphArea>
                 <RightListArea>
                     <Card title="Planos de ação" subTitle="Atualizações" type="List" withInput data={data.List}/>
