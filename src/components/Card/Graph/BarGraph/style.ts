@@ -6,7 +6,7 @@ export const ContentGraph = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
 `;
 
 export const GraphArea = styled.div`
@@ -25,6 +25,9 @@ export const LabelStyle = styled.div`
     display: flex;
     margin: 4px 0;
     h6{
+        font-weight: 300;
+        font-size: 0.9rem;
+        color: #161616;
         margin: 0;
     }
     img{

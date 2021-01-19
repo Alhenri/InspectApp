@@ -15,7 +15,12 @@ export const HeaderTitleArea = styled.div`
         margin: 0;
         margin-left: 5px;
     }
+    h5{
+        font-size: 1.4rem;
+        font-weight: 600;
+    }
     h6{
+        font-size: 1.2rem;
         font-weight: normal;
     }
 

@@ -30,6 +30,9 @@ export const ContentInfo = styled.div`
     justify-content: space-between;
     align-items: center;
     h6{
+        font-size: 1rem;
+        font-weight: normal;
+        color: #B0B0B0;
         margin: 0;
     }
 `;
@@ -41,8 +44,9 @@ export const TableStyle = styled.div`
         justify-content: space-between;
     }
     td{
-        font-size: 10px;
-        font-weight: 500;
+        font-size: 0.9rem;
+        font-weight: 300;
+        color: #161616;
     }
 `;
 
@@ -60,6 +64,9 @@ export const LabelStyle = styled.div`
     display: flex;
     margin: 4px 0;
     h6{
+        font-weight: 300;
+        font-size: 0.9rem;
+        color: #161616;
         margin: 0;
     }
     img{

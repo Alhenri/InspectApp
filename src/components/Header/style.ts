@@ -3,7 +3,11 @@ import styled from 'styled-components'
 export const HeaderStyle = styled.div`
     height: 100%;
     display: flex;
-    
+    @media(max-width: 560px){
+        width: 100%;
+        height: auto;
+        flex-direction: column; 
+    }
 `;
 
 export const PageBar = styled.div`
@@ -14,10 +18,6 @@ export const PageBar = styled.div`
     height: 100%;
     left: 0px;
     top: 0px;
-
-    @media(max-width: 580px){
-        display: none
-    }
 
     img{
         width: 24px;
@@ -31,6 +31,10 @@ export const PageBar = styled.div`
             background-color: #E2E2E2;
             border-radius: 6px;
         }
+    }
+    @media(max-width: 560px){
+        width: 100%;
+        height: 51px;
     }
 
     background: linear-gradient(180deg, #0DB2D6 8.12%, #4FDA91 71.62%);
@@ -51,25 +55,30 @@ export const ChangeContent = styled.div`
     border-bottom: none;
     border-left: none;
 
-    @media(max-width: 580px){
-        display: none;
-    }
-
     img.arrow{
+        position: relative;
         transition: 0.4s;
         height: 15px;
-        right: 1px;
-        top: 2px;
+        width: 15px;
         background-color: #0794B3;
-        padding: 2px 4px;
-        border-radius: 30px;
-        margin-left: ${({ width }: Iprops)=>{ return `${width-18}px` }};
-        margin-top: 5px;
-        margin-bottom: 5vh;
+        padding: 2px 2px;
+        border-radius: 50%;
+        margin-left: ${({ width }: Iprops)=>{ return `${width-8}px` }};
+        margin-top: 70px;
+        margin-bottom: 20px;
 
         :hover{
             transform: scale(1.3);
         }
+    }
+
+    @media(max-width: 560px){
+        width: 100%;
+        flex-direction: column;
+        img.arrow{
+            display: none;
+        }
+        height: 30px;
     }
 
 `;
@@ -78,15 +87,33 @@ export const SpanContainer = styled.div`
     flex: 1;
     display: flex;
     flex-direction: column;
+    width: 100%;
+    align-items: center;
+
+    @media(max-width: 560px){
+        flex-direction: row;
+        height: 100%;
+        span{
+            height: 100%;
+            justify-content: center;
+            border: 0.5px solid #E4E4E4;
+            box-sizing: border-box;
+            box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+        }
+    }
 `;
 
 export const SpanStyle = styled.span`
     cursor: pointer;
     display: flex;
+    width: 90%;
+    font-size: 1.5rem;
     transition: 0.2s;
+    align-items: center;
     img{
+        height: 1.8rem;
         margin-left: 3px;
-       margin-right: 3px; 
+        margin-right: 3px; 
     }
     :hover{
         background-color: wheat;

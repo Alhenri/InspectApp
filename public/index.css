@@ -1,4 +1,4 @@
-html, body, #root {
+html{
     margin: 0;
     padding: 0;
     align-items: center;
@@ -6,16 +6,30 @@ html, body, #root {
     text-decoration: none;
     background-color: white;
     font-family: 'Poppins', sans-serif;
+    font-size: 62.5%;
+    overflow: hidden;
+}
+
+body, #root {
+    font-size: 1.6rem;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    height: 100vh;
+    text-decoration: none;
+    background-color: white;
+    font-family: 'Poppins', sans-serif;
 }
 
 @media (max-width: 860px){
-    html, body, #root{
-        height: 350vh;
-    }
+
 }
 
 @media (max-width: 580px){
-    html, body, #root{
-        height: 400vh;
+    
+}
+@media (max-width: 425px){
+    html{
+        font-size: 50%;
     }
 }

@@ -4,6 +4,17 @@ export const ListContent = styled.div`
     width: 100%;
     overflow: auto;
     max-height: 80%;
+
+    h5, h6{
+        font-size: 1.2rem;
+        margin: 0;
+    }
+    h5{
+        color: #333333;
+    }
+    h6{
+        color: #B0B0B0;
+    }
 `;
 
 export const ListItem = styled.span`
@@ -20,12 +31,7 @@ export const TitleArea = styled.div`
     flex-direction: column;
     margin-left: 5px;
     flex: 3;
-    h5, h6{
-        margin: 0;
-    }
-    h6{
-        font-weight: 300;
-    }
+    
 `;
 export const InfoArea = styled.div`
     display: flex;
@@ -41,11 +47,11 @@ export const InfoArea = styled.div`
 export const StatusDone = styled.section`
     box-sizing: border-box;
     border-radius: 100px;
-    width: 100%;
+    width: 6.6rem;
     height: 10%;
     border: 2px solid #7FC008;
     h6{
-        font-size: 10px;
+        font-size: 0.6rem;
         margin: 0;
         color: #7FC008;
         text-align: center;

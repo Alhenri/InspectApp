@@ -11,7 +11,7 @@ export const TableStyle = styled.table`
     width: 100%;
     tr.Index{
         th{
-            font-size: 10px;
+            font-size: 0.6rem;
             font-weight:bold;
         }
         th.Name{
@@ -21,6 +21,7 @@ export const TableStyle = styled.table`
     tr.Data{
         td{
             font-weight: 500;
+            font-size: 1.2rem;
             text-align: center;
             border-bottom: 0.5px solid #EBEBEB;
         }
