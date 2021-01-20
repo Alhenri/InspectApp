@@ -1,3 +1,5 @@
+import { stringify } from "querystring";
+
 // Base de dados para teste
 function getRandomInt(min: number, max: number) { // retorna um valor aleatorio entre 2 numeros
     min = Math.ceil(min);
@@ -27,14 +29,21 @@ function dataBase(): IDataOut{
             plano: `Plano ${getRandomInt(0, 1000)}`,
             responsavel: `Funcionario ${getRandomInt(0, 100)}`,
             status: `${getRandomInt(0, 2)>0?"true":"false"}`,
-            hora: `${getRandomInt(0, 24)}:${getRandomInt(0, 60)}`,
-            data: `${getRandomInt(0, 28)}:${getRandomInt(0, 12)}:${getRandomInt(15, 20)}`
+            hora: `${getRandomInt(0, 24).toString().padStart(2, "0")
+            }:${getRandomInt(0, 60).toString().padStart(2, "0")}h`,
+            data: `${getRandomInt(0, 28).toString().padStart(2, "0")
+            }/${getRandomInt(0, 12).toString().padStart(2, "0")
+            }/${getRandomInt(15, 20).toString().padStart(2, "0")}`
         });
         auxTable.push({
             nome: `Funcionario ${getRandomInt(0, 100)}`,
             planejado: getRandomInt(5, 10),
             realizado: getRandomInt(5, 10),
-            lastAtt: `${getRandomInt(0, 28)}:${getRandomInt(0, 12)}:${getRandomInt(15, 20)}`
+            lastAtt: `${getRandomInt(0, 24).toString().padStart(2, "0")}:${
+            getRandomInt(0, 60).toString().padStart(2, "0")}h 
+            ${getRandomInt(0, 28).toString().padStart(2, "0")
+            }/${getRandomInt(0, 12).toString().padStart(2, "0")
+            }/${getRandomInt(15, 20).toString().padStart(2, "0")}`
         })
     }
     return {
