@@ -1,9 +1,18 @@
 import styled from 'styled-components'
 
+export const SelectStyle = styled.select`
+    width: 90%;
+    margin-top: 1.3rem;
+    margin-bottom: 1.3rem;
+    background: #C4C4C4;
+    border-radius: 100px;
+`;
+
 export const ListContent = styled.div`
+    margin-top: 1rem;
     width: 100%;
     overflow: auto;
-    max-height: 80%;
+    max-height: 75%;
 
     h5, h6{
         font-size: 1.2rem;

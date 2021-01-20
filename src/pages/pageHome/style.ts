@@ -46,7 +46,7 @@ export const TitleArea = styled.div`
     }
 
     @media(max-width: 580px){
-        height: 360%;
+        height: 380%;
         width: 90%;
     }
 `;

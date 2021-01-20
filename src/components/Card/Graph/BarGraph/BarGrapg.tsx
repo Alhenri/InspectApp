@@ -40,15 +40,11 @@ export const MyResponsiveBar = ({ dado }: Iprops) => {
             <ContentLabel>
                 <LabelStyle>
                     <img src={verd} alt="verde"/>
-                    <h6>Realizadas</h6>
+                    <h6>Inspeções realizadas</h6>
                 </LabelStyle>
                 <LabelStyle>
                     <img src={lara} alt="verde"/>
-                    <h6>Em aberto</h6>
-                </LabelStyle>
-                <LabelStyle>
-                    <img src={verm} alt="verde"/>
-                    <h6>Não realizadas</h6>
+                    <h6>Planos em ação criados</h6>
                 </LabelStyle>
             </ContentLabel>
         </ContentGraph>

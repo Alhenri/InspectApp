@@ -19,7 +19,8 @@ export const ControlPanelStyle = styled.div`
 export const ContainerLeft = styled.div`
     height: 95%;
     flex-grow: 2;
-    margin-right: 10px;
+    margin-right: 15px;
+    min-height: 1000px;
     @media(max-width: 860px){
        height: 50%;
     }

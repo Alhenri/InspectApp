@@ -10,6 +10,24 @@ export const HeaderStyle = styled.div`
     }
 `;
 
+export const DivHomeIcon = styled.div`
+    background-color: #FAFAFA;
+    height: 6.1rem;
+    width: 6.1rem;
+    border-radius: 50%;
+    margin-top: 105px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    div{
+        margin: 2px 0;
+        width: 30%;
+        height: 0.2rem;
+        background-color: #333333;
+    }
+`;
+
 export const PageBar = styled.div`
     display: flex;
     flex-direction: column;
@@ -35,6 +53,10 @@ export const PageBar = styled.div`
     @media(max-width: 560px){
         width: 100%;
         height: 51px;
+
+        #Icon{
+            margin-top:0;
+        }
     }
 
     background: linear-gradient(180deg, #0DB2D6 8.12%, #4FDA91 71.62%);

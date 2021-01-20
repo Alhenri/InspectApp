@@ -39,6 +39,7 @@ export const HeaderConfigArea = styled.div`
     }
     select{
         flex: 1;
+        font-size: 1.4rem;
         background: #C4C4C4;
         border-radius: 100px;
         margin-right: 5px;

@@ -1,14 +1,12 @@
 import styled from 'styled-components';
 
 export const CircleGraphArea = styled.div`
-    margin-top: 2vh;
-    height: 15vh;
+    height: 40%;
     width: 90%;
 `;
 
 export const Content = styled.div`
     display: flex;
-    margin-top: 5px;
     width: 100%;
     justify-content: space-between;
 `;
@@ -51,13 +49,12 @@ export const TableStyle = styled.div`
 `;
 
 export const GraphArea = styled.div`
-    margin-top: 2vh;
     height: 90%;
     width: 90%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
 `;
 
 export const LabelStyle = styled.div`

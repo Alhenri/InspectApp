@@ -16,7 +16,7 @@ function dataBase(): IDataOut{
     const auxList: object[] = [];
     const auxTable: object[] = [];
 
-    for (let index = 0; index < getRandomInt(19, 20); index++) {
+    for (let index = 0; index < getRandomInt(5, 20); index++) {
         auxGraph.push({
             Day: `teste ${index}`,
             Azul: getRandomInt(0, 100),

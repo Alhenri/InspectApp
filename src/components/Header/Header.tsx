@@ -7,7 +7,8 @@ import {
     HeaderStyle,
     PageBar,
     SpanContainer,
-    SpanStyle
+    SpanStyle,
+    DivHomeIcon
 } from  './style';
 
 interface Iprops{
@@ -21,7 +22,12 @@ export default function Header({ OnClick }: Iprops ){
     return (
         <HeaderStyle>
             <PageBar>
-                <img src={img_op} alt="op" onClick={()=>{console.log("clicou")}} />
+                <DivHomeIcon id="Icon">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </DivHomeIcon>
+                {/* <img src={img_op} alt="op" onClick={()=>{console.log("clicou")}} /> */}
             </PageBar>
 
             {/* controle da barra de mudança de conteudo */}

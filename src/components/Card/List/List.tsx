@@ -7,7 +7,8 @@ import {
     TitleArea,
     InfoArea,
     StatusDone,
-    StatusToDo
+    StatusToDo,
+    SelectStyle
 } from './style';
 
 interface Iprops{
@@ -19,6 +20,11 @@ export default function List({data}: Iprops){
     dataList.dataConverter();
 
     return(
+        <>
+        <SelectStyle>
+            <option value="Pendente">Pendente</option>
+            <option value="Realizado" selected>Realizado</option>
+        </SelectStyle>
         <ListContent>
             {
                 dataList.outData.map(
@@ -47,5 +53,6 @@ export default function List({data}: Iprops){
                     )})
             }
         </ListContent>
+        </>
     )
 }
