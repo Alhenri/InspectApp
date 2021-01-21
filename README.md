@@ -1,5 +1,7 @@
 # Tela de controle de inspeções
 
+<img src="https://media.giphy.com/media/7BpsSNeQFu0lmMK8t6/giphy.gif"/>
+
 Esse projeto foi criado a fim de testar a minha capacidade de criação de interfaces no processo seletivo de
 estágio da Tracking Trade usando o TypeScript, reactJS, styled-components, React Hooks, e Context-API.
 
